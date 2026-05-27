@@ -5,76 +5,121 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Le'Playground</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#000;
-color:#fff;
-line-height:1.6;
+background:linear-gradient(135deg,#050505,#111,#0a0a0a);
+color:white;
+overflow-x:hidden;
 }
 
 header{
-height:100vh;
+min-height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:20px;
-background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
-url('https://images.unsplash.com/photo-1516280440614-37939bbacd81');
-background-size:cover;
-background-position:center;
+padding:30px;
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.55)),
+radial-gradient(circle at top left,#00e5ff55,transparent 40%),
+radial-gradient(circle at bottom right,#ff00ff55,transparent 40%);
 }
 
-header h1{
-font-size:4rem;
-letter-spacing:3px;
+.logo{
+width:130px;
+margin-bottom:20px;
+border-radius:50%;
+box-shadow:0 0 30px #00e5ff;
 }
 
-header p{
-font-size:1.3rem;
-max-width:700px;
-margin:20px 0;
+.brand{
+font-family:'Great Vibes',cursive;
+font-size:clamp(3rem,8vw,6rem);
+color:#fff;
+text-shadow:
+0 0 12px #00e5ff,
+0 0 20px #ff00ff;
+}
+
+.tagline{
+max-width:800px;
+font-size:1.2rem;
+margin:20px auto;
+color:#ddd;
+}
+
+.btn-wrap{
+margin-top:25px;
 }
 
 .btn{
 display:inline-block;
-padding:14px 28px;
+padding:15px 30px;
 margin:10px;
-background:#fff;
-color:#000;
+border-radius:40px;
 text-decoration:none;
-font-weight:bold;
-border-radius:30px;
+font-weight:700;
+transition:.3s;
+}
+
+.ig{
+background:#ff00aa;
+color:white;
+}
+
+.book{
+background:#00e5ff;
+color:black;
+}
+
+.btn:hover{
+transform:scale(1.08);
 }
 
 section{
-padding:80px 10%;
+padding:90px 8%;
 }
 
 .section-title{
-font-size:2.5rem;
-margin-bottom:40px;
+font-size:3rem;
 text-align:center;
+margin-bottom:50px;
+color:#00e5ff;
 }
 
 .services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
 }
 
 .card{
-background:#111;
-padding:30px;
-border-radius:20px;
+background:rgba(255,255,255,.06);
+backdrop-filter:blur(10px);
+padding:35px;
+border-radius:25px;
+border:1px solid rgba(255,255,255,.12);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px #00e5ff55;
+}
+
+.card h3{
+color:#ff00ff;
+margin-bottom:15px;
 }
 
 .gallery{
@@ -85,7 +130,9 @@ gap:20px;
 
 .gallery img{
 width:100%;
-border-radius:20px;
+border-radius:25px;
+object-fit:cover;
+box-shadow:0 0 25px rgba(0,229,255,.25);
 }
 
 form{
@@ -93,94 +140,105 @@ max-width:700px;
 margin:auto;
 display:flex;
 flex-direction:column;
-gap:15px;
+gap:18px;
 }
 
-input, textarea, select{
-padding:15px;
+input,select,textarea{
+padding:18px;
 border:none;
-border-radius:10px;
+border-radius:18px;
+background:#111;
+color:white;
+font-size:1rem;
 }
 
 button{
-padding:15px;
-background:#fff;
-color:#000;
-font-weight:bold;
+padding:18px;
 border:none;
-border-radius:30px;
+border-radius:40px;
+background:linear-gradient(90deg,#00e5ff,#ff00aa);
+font-weight:700;
+font-size:1rem;
 cursor:pointer;
 }
 
 footer{
 text-align:center;
 padding:40px;
-background:#111;
+background:#050505;
+color:#aaa;
 }
 </style>
 </head>
 <body>
 
 <header>
-<h1>Le’Playground</h1>
-<p>
-Where movement, vision, and artistry come to life.
-Innovative choreography, artist development, movement coaching,
-and elevated creative direction.
+
+<img src="https://via.placeholder.com/200" class="logo">
+
+<h1 class="brand">Le’Playground</h1>
+
+<p class="tagline">
+Where movement, vision, and artistry collide.
+Innovative choreography, creative direction,
+artist development, and unforgettable experiences.
 </p>
 
-<a class="btn" href="https://instagram.com/leplayground19">Instagram</a>
-<a class="btn" href="https://cash.app/$TahaneeWaqia3">Book Deposit</a>
+<div class="btn-wrap">
+<a class="btn ig" href="https://instagram.com/leplayground19">Instagram</a>
+<a class="btn book" href="https://cash.app/$TahaneeWaqia3">Book Now</a>
+</div>
+
 </header>
 
 <section>
-<h2 class="section-title">Our Services</h2>
+<h2 class="section-title">Creative Services</h2>
+
 <div class="services">
 
 <div class="card">
 <h3>Choreography</h3>
-<p>Custom choreography for artists, visuals, stage performances and productions.</p>
+<p>Stage movement, visual performance creation, and artist performance execution.</p>
 </div>
 
 <div class="card">
 <h3>Movement Coaching</h3>
-<p>Elevated performance coaching to strengthen stage presence and execution.</p>
+<p>Performance refinement and movement confidence development.</p>
 </div>
 
 <div class="card">
 <h3>Artist Development</h3>
-<p>Creative growth, confidence building, movement refinement and branding direction.</p>
+<p>Elevating artist identity, confidence, stage presence and execution.</p>
 </div>
 
 <div class="card">
 <h3>Creative Direction</h3>
-<p>Conceptual vision for performances, shoots, campaigns and live productions.</p>
+<p>Visual concepts for performances, shoots and productions.</p>
 </div>
 
 </div>
 </section>
 
 <section>
-<h2 class="section-title">Le’Playground Visuals</h2>
+<h2 class="section-title">The Playground</h2>
+
 <div class="gallery">
-
-<img src="https://via.placeholder.com/500x600" alt="">
-<img src="https://via.placeholder.com/500x600" alt="">
-<img src="https://via.placeholder.com/500x600" alt="">
-
+<img src="YOURPHOTO1.jpg">
+<img src="YOURPHOTO2.jpg">
+<img src="YOURPHOTO3.jpg">
 </div>
 </section>
 
 <section>
 <h2 class="section-title">Book Le’Playground</h2>
 
-<form action="mailto:leplayground19@gmail.com" method="post" enctype="text/plain">
+<form action="mailto:leplayground19@gmail.com" method="post">
 
-<input type="text" placeholder="Full Name" required>
+<input type="text" placeholder="Full Name">
 
-<input type="email" placeholder="Email Address" required>
+<input type="email" placeholder="Email">
 
-<select required>
+<select>
 <option>Select Service</option>
 <option>Choreography</option>
 <option>Movement Coaching</option>
@@ -188,16 +246,15 @@ and elevated creative direction.
 <option>Creative Direction</option>
 </select>
 
-<textarea rows="6" placeholder="Project Details"></textarea>
+<textarea rows="6" placeholder="Tell us about your project"></textarea>
 
-<button type="submit">Submit Inquiry</button>
+<button>Submit Inquiry</button>
 
 </form>
 </section>
 
 <footer>
-<p>Le’Playground © 2026</p>
-<p>Inquiries: leplayground19@gmail.com</p>
+Le’Playground © 2026 • leplayground19@gmail.com
 </footer>
 
 </body>
