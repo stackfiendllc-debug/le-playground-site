@@ -16,7 +16,7 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#050505,#111,#0a0a0a);
+background:#050505;
 color:white;
 overflow-x:hidden;
 }
@@ -28,57 +28,60 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:30px;
+padding:25px;
 background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.55)),
-radial-gradient(circle at top left,#00e5ff55,transparent 40%),
-radial-gradient(circle at bottom right,#ff00ff55,transparent 40%);
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
+radial-gradient(circle at top left,#00f7ff55,transparent 35%),
+radial-gradient(circle at bottom right,#ff00d455,transparent 35%),
+radial-gradient(circle at center,#8a2be255,transparent 40%);
 }
 
 .logo{
-width:130px;
+width:120px;
 margin-bottom:20px;
 border-radius:50%;
-box-shadow:0 0 30px #00e5ff;
+box-shadow:0 0 30px #00f7ff;
 }
 
 .brand{
 font-family:'Great Vibes',cursive;
-font-size:clamp(3rem,8vw,6rem);
-color:#fff;
+font-size:clamp(2.8rem,9vw,5rem);
+color:white;
 text-shadow:
-0 0 12px #00e5ff,
-0 0 20px #ff00ff;
+0 0 10px #00f7ff,
+0 0 18px #ff00d4;
+line-height:1.2;
 }
 
 .tagline{
 max-width:800px;
-font-size:1.2rem;
+font-size:1.1rem;
 margin:20px auto;
 color:#ddd;
+padding:0 10px;
 }
 
 .btn-wrap{
-margin-top:25px;
+margin-top:20px;
 }
 
 .btn{
 display:inline-block;
-padding:15px 30px;
-margin:10px;
+padding:14px 28px;
+margin:8px;
 border-radius:40px;
 text-decoration:none;
 font-weight:700;
-transition:.3s;
+transition:.3s ease;
 }
 
 .ig{
-background:#ff00aa;
+background:#ff00d4;
 color:white;
 }
 
 .book{
-background:#00e5ff;
+background:#00f7ff;
 color:black;
 }
 
@@ -91,48 +94,49 @@ padding:90px 8%;
 }
 
 .section-title{
-font-size:3rem;
+font-size:2.5rem;
 text-align:center;
-margin-bottom:50px;
-color:#00e5ff;
+margin-bottom:45px;
+color:#00f7ff;
 }
 
 .services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .card{
 background:rgba(255,255,255,.06);
-backdrop-filter:blur(10px);
-padding:35px;
+padding:30px;
 border-radius:25px;
-border:1px solid rgba(255,255,255,.12);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,.1);
 transition:.4s;
 }
 
 .card:hover{
 transform:translateY(-10px);
-box-shadow:0 0 25px #00e5ff55;
+box-shadow:0 0 20px rgba(0,247,255,.35);
 }
 
 .card h3{
-color:#ff00ff;
-margin-bottom:15px;
+color:#ff00d4;
+margin-bottom:12px;
 }
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:20px;
 }
 
 .gallery img{
 width:100%;
-border-radius:25px;
+height:400px;
 object-fit:cover;
-box-shadow:0 0 25px rgba(0,229,255,.25);
+border-radius:25px;
+box-shadow:0 0 25px rgba(0,247,255,.2);
 }
 
 form{
@@ -144,7 +148,7 @@ gap:18px;
 }
 
 input,select,textarea{
-padding:18px;
+padding:16px;
 border:none;
 border-radius:18px;
 background:#111;
@@ -153,10 +157,10 @@ font-size:1rem;
 }
 
 button{
-padding:18px;
+padding:16px;
 border:none;
 border-radius:40px;
-background:linear-gradient(90deg,#00e5ff,#ff00aa);
+background:linear-gradient(90deg,#00f7ff,#ff00d4);
 font-weight:700;
 font-size:1rem;
 cursor:pointer;
@@ -165,8 +169,14 @@ cursor:pointer;
 footer{
 text-align:center;
 padding:40px;
-background:#050505;
+background:#080808;
 color:#aaa;
+}
+
+@media(max-width:768px){
+.brand{
+font-size:3rem;
+}
 }
 </style>
 </head>
@@ -174,19 +184,19 @@ color:#aaa;
 
 <header>
 
-<img src="https://via.placeholder.com/200" class="logo">
+<img src="images/logo.png" class="logo" alt="Le'Playground Logo">
 
 <h1 class="brand">Le’Playground</h1>
 
 <p class="tagline">
 Where movement, vision, and artistry collide.
-Innovative choreography, creative direction,
-artist development, and unforgettable experiences.
+Creative choreography, artist development, movement coaching,
+and elevated direction for unforgettable performances.
 </p>
 
 <div class="btn-wrap">
-<a class="btn ig" href="https://instagram.com/leplayground19">Instagram</a>
-<a class="btn book" href="https://cash.app/$TahaneeWaqia3">Book Now</a>
+<a class="btn ig" href="https://instagram.com/leplayground19" target="_blank">Instagram</a>
+<a class="btn book" href="https://cash.app/$TahaneeWaqia3" target="_blank">Book Now</a>
 </div>
 
 </header>
@@ -198,22 +208,22 @@ artist development, and unforgettable experiences.
 
 <div class="card">
 <h3>Choreography</h3>
-<p>Stage movement, visual performance creation, and artist performance execution.</p>
+<p>Custom choreography for performances, visuals, artists, and productions.</p>
 </div>
 
 <div class="card">
 <h3>Movement Coaching</h3>
-<p>Performance refinement and movement confidence development.</p>
+<p>Performance development designed to refine stage confidence and presence.</p>
 </div>
 
 <div class="card">
 <h3>Artist Development</h3>
-<p>Elevating artist identity, confidence, stage presence and execution.</p>
+<p>Helping artists evolve creatively through movement, identity and execution.</p>
 </div>
 
 <div class="card">
 <h3>Creative Direction</h3>
-<p>Visual concepts for performances, shoots and productions.</p>
+<p>Visionary direction for visuals, live productions, campaigns and concepts.</p>
 </div>
 
 </div>
@@ -223,9 +233,9 @@ artist development, and unforgettable experiences.
 <h2 class="section-title">The Playground</h2>
 
 <div class="gallery">
-<img src="YOURPHOTO1.jpg">
-<img src="YOURPHOTO2.jpg">
-<img src="YOURPHOTO3.jpg">
+<img src="images/photo1.jpeg" alt="">
+<img src="images/photo2.jpeg" alt="">
+<img src="images/photo3.jpeg" alt="">
 </div>
 </section>
 
@@ -234,11 +244,11 @@ artist development, and unforgettable experiences.
 
 <form action="mailto:leplayground19@gmail.com" method="post">
 
-<input type="text" placeholder="Full Name">
+<input type="text" placeholder="Full Name" required>
 
-<input type="email" placeholder="Email">
+<input type="email" placeholder="Email Address" required>
 
-<select>
+<select required>
 <option>Select Service</option>
 <option>Choreography</option>
 <option>Movement Coaching</option>
@@ -248,13 +258,14 @@ artist development, and unforgettable experiences.
 
 <textarea rows="6" placeholder="Tell us about your project"></textarea>
 
-<button>Submit Inquiry</button>
+<button type="submit">Submit Inquiry</button>
 
 </form>
 </section>
 
 <footer>
-Le’Playground © 2026 • leplayground19@gmail.com
+Le’Playground © 2026 <br>
+Inquiries: leplayground19@gmail.com
 </footer>
 
 </body>
