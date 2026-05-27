@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le'Playground</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#000;
+color:#fff;
+line-height:1.6;
+}
+
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url('https://images.unsplash.com/photo-1516280440614-37939bbacd81');
+background-size:cover;
+background-position:center;
+}
+
+header h1{
+font-size:4rem;
+letter-spacing:3px;
+}
+
+header p{
+font-size:1.3rem;
+max-width:700px;
+margin:20px 0;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+margin:10px;
+background:#fff;
+color:#000;
+text-decoration:none;
+font-weight:bold;
+border-radius:30px;
+}
+
+section{
+padding:80px 10%;
+}
+
+.section-title{
+font-size:2.5rem;
+margin-bottom:40px;
+text-align:center;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#111;
+padding:30px;
+border-radius:20px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:20px;
+}
+
+form{
+max-width:700px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input, textarea, select{
+padding:15px;
+border:none;
+border-radius:10px;
+}
+
+button{
+padding:15px;
+background:#fff;
+color:#000;
+font-weight:bold;
+border:none;
+border-radius:30px;
+cursor:pointer;
+}
+
+footer{
+text-align:center;
+padding:40px;
+background:#111;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Le’Playground</h1>
+<p>
+Where movement, vision, and artistry come to life.
+Innovative choreography, artist development, movement coaching,
+and elevated creative direction.
+</p>
+
+<a class="btn" href="https://instagram.com/leplayground19">Instagram</a>
+<a class="btn" href="https://cash.app/$TahaneeWaqia3">Book Deposit</a>
+</header>
+
+<section>
+<h2 class="section-title">Our Services</h2>
+<div class="services">
+
+<div class="card">
+<h3>Choreography</h3>
+<p>Custom choreography for artists, visuals, stage performances and productions.</p>
+</div>
+
+<div class="card">
+<h3>Movement Coaching</h3>
+<p>Elevated performance coaching to strengthen stage presence and execution.</p>
+</div>
+
+<div class="card">
+<h3>Artist Development</h3>
+<p>Creative growth, confidence building, movement refinement and branding direction.</p>
+</div>
+
+<div class="card">
+<h3>Creative Direction</h3>
+<p>Conceptual vision for performances, shoots, campaigns and live productions.</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Le’Playground Visuals</h2>
+<div class="gallery">
+
+<img src="https://via.placeholder.com/500x600" alt="">
+<img src="https://via.placeholder.com/500x600" alt="">
+<img src="https://via.placeholder.com/500x600" alt="">
+
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Book Le’Playground</h2>
+
+<form action="mailto:leplayground19@gmail.com" method="post" enctype="text/plain">
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<select required>
+<option>Select Service</option>
+<option>Choreography</option>
+<option>Movement Coaching</option>
+<option>Artist Development</option>
+<option>Creative Direction</option>
+</select>
+
+<textarea rows="6" placeholder="Project Details"></textarea>
+
+<button type="submit">Submit Inquiry</button>
+
+</form>
+</section>
+
+<footer>
+<p>Le’Playground © 2026</p>
+<p>Inquiries: leplayground19@gmail.com</p>
+</footer>
+
+</body>
+</html>
